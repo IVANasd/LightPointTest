@@ -23,7 +23,8 @@ namespace LightPointTest.Controllers
             {
                 Id = s.Id,
                 Name = s.Name,
-                Address = s.Address
+                Address = s.Address,
+                WorkTime = s.WorkTimeString
             });
             return shops;
         }

@@ -42,7 +42,8 @@ using System.Linq;
                 {
                     Name = "shop ¹"+i,
                     Address = "Address for "+i,
-                    Products = GetProducts(rnd.Next(100), i+"shopProduct")
+                    Products = GetProducts(rnd.Next(100), i+"shopProduct"),
+                    WorkTimeString = "9.00 - 18.00 everyday"
                 });
             }
 

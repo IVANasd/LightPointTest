@@ -108,12 +108,10 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Shop\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\ShopController.cs" />
     <Compile Include="Controllers\ShopWebApiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -121,6 +119,10 @@
     <Compile Include="Migrations\201507290928429_InitialCreate.cs" />
     <Compile Include="Migrations\201507290928429_InitialCreate.Designer.cs">
       <DependentUpon>201507290928429_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507291234309_AddShopWorkTime.cs" />
+    <Compile Include="Migrations\201507291234309_AddShopWorkTime.Designer.cs">
+      <DependentUpon>201507291234309_AddShopWorkTime.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DbModels\Product.cs" />
@@ -133,7 +135,6 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <Content Include="Views\Shop\ShopLayout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -147,6 +148,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201507290928429_InitialCreate.resx">
       <DependentUpon>201507290928429_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507291234309_AddShopWorkTime.resx">
+      <DependentUpon>201507291234309_AddShopWorkTime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
