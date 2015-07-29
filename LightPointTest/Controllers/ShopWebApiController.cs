@@ -29,15 +29,21 @@ namespace LightPointTest.Controllers
         }
 
         [Route("{shopId}/Products")]
-        public IEnumerable<ProductViewModel> GetProducts(int shopId)
+        public IHttpActionResult GetProducts(int shopId)
         {
+            var shop = db.Shops.Find(shopId);
+            if (shop == null)
+            {
+                return BadRequest();
+            }
+
             var products = db.Shops.Find(shopId).Products.Select(
                 p=>new ProductViewModel(){
                     Id = p.Id,
                     Name = p.Name,
                     Description = p.Description
             });
-            return products;
+            return Ok(products);
         }
     }
 }
