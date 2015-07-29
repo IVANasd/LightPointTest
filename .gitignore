@@ -31,3 +31,5 @@ _ReSharper*/
 *.mdf
 *.ldf
 Packages/
+
+*.idea
