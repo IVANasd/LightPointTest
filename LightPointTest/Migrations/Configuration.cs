@@ -23,8 +23,8 @@ using System.Linq;
             {
                 products.Add(new Product()
                 {
-                    Name = namePrefix + count,
-                    Description = "description for " + namePrefix + count
+                    Name = namePrefix + i,
+                    Description = "description for " + namePrefix + i
                 });
             }
 
