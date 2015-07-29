@@ -1,0 +1,29 @@
+﻿@model IEnumerable<LightPointTest.Models.ViewModels.ShopViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shop/ShopLayout.cshtml";
+}
+
+<h2>Shops</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Products</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Address</td>
+                <td><a href="#">Products</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
